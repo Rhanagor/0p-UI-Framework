@@ -1,0 +1,552 @@
+/* 0% UI Framework - Estilo 16-bits inspirado en la imagen proporcionada */
+
+body {
+  font-family: 'Press Start 2P', system-ui, sans-serif;
+  background-color: #0d1b2a;
+  color: #e0e1dd;
+  margin: 0;
+  padding: 1rem;
+  image-rendering: pixelated;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #a9d6e5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1b263b;
+  padding: 1rem;
+  border-bottom: 4px solid #415a77;
+}
+
+
+/* BUTTON */
+.btn {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #415a77;
+  color: #e0e1dd;
+  padding: 0.75rem 1rem;
+  border: 2px solid #778da9;
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #1d3557;
+}
+
+/* INPUT */
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #778da9;
+  background-color: #1b263b;
+  color: #e0e1dd;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.75rem;
+}
+
+/* LABEL */
+.label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #a9d6e5;
+}
+
+/* CARD */
+.card {
+  background-color: #1b263b;
+  border: 3px solid #415a77;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 4px 4px 0 #000;
+  image-rendering: pixelated;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* ALERT BASE */
+.alert {
+  padding: 0.75rem;
+  border: 2px dashed #a9d6e5;
+  margin-bottom: 0.5rem;
+  color: #edf6f9;
+  position: relative; /* Para que el botón de cierre esté posicionado */
+  border-radius: 5px;
+}
+
+/* Tipos de alertas */
+.alert.info {
+  background-color: #274c77;
+  border-color: #1a4d6e;
+}
+
+.alert.success {
+  background-color: #2e8b57;
+  border-color: #1c6e4c;
+}
+
+.alert.warning {
+  background-color: #f1c232;
+  border-color: #c9a327;
+}
+
+.alert.error {
+  background-color: #e74c3c;
+  border-color: #c0392b;
+}
+
+/* Botón de cierre */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #edf6f9;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: #fff;
+}
+
+
+/* CHECKBOX */
+/* Estilo para el checkbox y el radio button */
+input[type="radio"], input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  width: 20px;  /* Tamaño ajustado */
+  height: 20px;
+  border: 3px solid #4d6e8d;  /* Borde más grueso para el estilo pixel */
+  background-color: #2e3c53;  /* Fondo oscuro para el estilo pixel */
+  border-radius: 5px;  /* Borde cuadrado con esquinas ligeramente redondeadas */
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;  /* Animación suave */
+}
+
+input[type="radio"]:checked, input[type="checkbox"]:checked {
+  background-color: #0f4c81;  /* Color de fondo cuando se selecciona */
+  border-color: #0f4c81;  /* Bordes del color cuando seleccionado */
+}
+
+/* Crear la "X" dentro del checkbox */
+input[type="checkbox"]:checked::before {
+  content: 'X';  /* El contenido de la "X" */
+  position: absolute;
+  top: 3px;  /* Posición de la "X" dentro del cuadro */
+  left: 3px;
+  font-family: 'Courier New', monospace;  /* Fuente estilo pixel */
+  font-size: 14px;  /* Tamaño ajustado de la "X" */
+  color: white;  /* Color blanco para la "X" */
+  transform: rotate(45deg);  /* Rotar la "X" para que sea diagonal */
+  font-weight: bold;  /* Hacer la "X" más visible */
+}
+
+/* Cuando el radio o checkbox están seleccionados, agregar un círculo pequeño en el centro */
+input[type="radio"]:checked::before, input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: white;  /* El círculo interior de color blanco */
+  border-radius: 50%;  /* Forma circular */
+}
+
+/* Efecto hover (opcional para el estilo de interacción) */
+input[type="radio"]:hover, input[type="checkbox"]:hover {
+  background-color: #3a4a65;  /* Fondo ligeramente más claro en hover */
+  border-color: #2c3d57;  /* Borde más claro */
+}
+
+/* Foco */
+input[type="radio"]:focus, input[type="checkbox"]:focus {
+  outline: none;  /* Remover el outline por defecto */
+  border-color: #1a72b5;  /* Color de borde cuando están en foco */
+}
+
+
+/* SELECT */
+.select {
+  padding: 0.75rem;
+  border: 2px solid #778da9;
+  background-color: #1b263b;
+  color: #e0e1dd;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.75rem;
+}
+
+/* BADGE */
+.badge {
+  background-color: #415a77;
+  color: #e0e1dd;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+}
+
+/* TOOLTIP */
+.tooltip-btn {
+  position: relative;
+  background-color: #415a77;
+  color: #e0e1dd;
+  padding: 0.75rem 1rem;
+  border: 2px solid #778da9;
+}
+
+.tooltip-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #274c77;
+  color: #edf6f9;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  display: none;
+}
+
+.tooltip-btn:hover::after {
+  display: block;
+}
+
+/* PROGRESS */
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #274c77;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-filled {
+  height: 100%;
+  background-color: #415a77;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #1b263b;
+  padding: 20px;
+  border: 2px solid #415a77;
+  width: 50%;
+  margin: 100px auto;
+  color: #e0e1dd;
+  position: relative; /* Añadir esto para que el botón se posicione dentro de este contenedor */
+}
+
+.close {
+  color: #e0e1dd;
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+
+/* TABLA */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1b263b;
+}
+
+.table th, .table td {
+  padding: 1rem;
+  border: 1px solid #415a77;
+  text-align: center;
+  color: #e0e1dd;
+}
+
+/* TOAST */
+/* Estilo básico para el toast */
+.toast {
+  position: fixed;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Posicionamientos del toast */
+.toast.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.toast.top-center {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.toast.bottom-center {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.toast.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+
+/* TABS */
+.tab-content {
+  display: none;
+}
+
+.tab-btn {
+  background-color: #415a77;
+  color: #e0e1dd;
+  padding: 0.75rem 1rem;
+  border: 2px solid #778da9;
+  font-family: 'Press Start 2P', cursive;  /* Estilo pixel */
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Espaciado de letras para el estilo pixel */
+}
+
+.tab-btn:hover {
+  background-color: #274c77;
+}
+
+.tab-btn.active {
+  background-color: #274c77;
+  border-color: #1b263b;
+}
+
+.tab-content {
+  background-color: #1b263b;
+  color: #e0e1dd;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: 'Press Start 2P', cursive;  /* Estilo pixel */
+  font-size: 1rem;
+}
+
+/* Agregar estilo al texto en las pestañas */
+h3, p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+}
+
+
+/*LOADERS*/
+.loader {
+  border: 4px solid transparent;
+  border-top: 4px solid #415a77;
+  border-right: 4px solid #415a77;
+  border-bottom: 4px solid #415a77;
+  border-left: 4px solid #415a77;
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  animation: spin 1s linear infinite;
+  display: block;
+  position: relative;
+}
+
+/* Animación para el efecto pixelado */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ACORDEON */
+/* Accordion */
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-btn {
+  width: 100%;
+  background-color: #415a77;
+  color: #e0e1dd;
+  padding: 0.75rem;
+  border: 3px solid #274c77;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.accordion-content {
+  display: none;
+  background-color: #1b263b;
+  padding: 1rem;
+  color: #e0e1dd;
+  font-size: 14px;
+}
+
+.accordion-btn.active + .accordion-content {
+  display: block;
+}
+
+/* CARD BOX */
+/* Card */
+.card-box {
+  background-color: #1b263b;
+  border: 3px solid #415a77;
+  /*padding: 10px;*/
+  border-radius: 5px;
+  /*width: 300px;*/
+  font-family: 'Press Start 2P', cursive;
+}
+
+.card-header {
+  background-color: #415a77;
+  color: #e0e1dd;
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+.card-body {
+  background-color: #274c77;
+  padding: 1rem;
+  color: #e0e1dd;
+}
+
+.card-footer {
+  background-color: #415a77;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+
+/* Pixel Art Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #415a77;
+  border: 2px solid #2a3c56;  /* Definir un borde más grueso */
+  transition: 0.2s;
+  border-radius: 2px;  /* Bordes más angulosos para un look pixelado */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-color: #e0e1dd;
+  border: 2px solid #2a3c56;  /* Añadir un borde para el efecto pixel */
+  border-radius: 2px;  /* Bordes más angulosos */
+  left: 2px;
+  bottom: 2px;
+  transition: 0.2s;
+}
+
+/* Efecto cuando el toggle está activado */
+input:checked + .slider {
+  background-color: #274c77;
+  border-color: #1e3651; /* Cambio de color de borde al activar */
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #1b263b;
+  border: 2px solid #415a77;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search-bar input {
+  border: none;
+  background-color: transparent;
+  color: #e0e1dd;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  padding: 5px;
+  flex-grow: 1;
+}
+
+.search-bar button {
+  background-color: #415a77;
+  color: #e0e1dd;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}

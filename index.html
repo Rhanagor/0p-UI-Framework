@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo UI 0%</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="navbar">
+    <div>🔐 0% SaaS</div>
+    <div><button class="btn">Login</button></div>
+  </div>
+
+  <h1>Componentes UI 0%</h1>
+
+  <div class="grid">
+    <div class="card">
+      <label class="label">Nombre de usuario</label>
+      <input class="input" type="text" placeholder="Escribe tu usuario..." />
+      <br><br>
+      <label class="label">Contraseña</label>
+      <input class="input" type="password" placeholder="••••••" />
+      <br><br>
+      <button class="btn">Enviar</button>
+    </div>
+
+    <div class="card">
+      <h2>Alertas</h2>
+      <!-- Contenedor para alertas -->
+      <div id="alert-container"></div>
+      <!-- Botón para abrir una alerta -->
+      <button class="btn" onclick="showAlert('info','esta es una alerta infooooo')">Información</button>
+      <button class="btn" onclick="showAlert('success','todo correcto')">Éxito</button>
+      <button class="btn" onclick="showAlert('warning','alerta, alerta ...')">Advertencia</button>
+      <button class="btn" onclick="showAlert('error','Huston, tenemos un problema')">Error</button>
+    </div>
+
+    <div class="card">
+      <h2>Botones</h2>
+      <button class="btn">Aceptar</button>
+      <button class="btn">Cancelar</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <!-- checkbox y radio -->
+      <h2>Formulario con Checkbox y Radio Button</h2>
+
+      <!-- Checkbox -->
+      <label>
+        <input type="checkbox" class="checkbox"> Acepto los términos y condiciones
+      </label>
+
+      <br>
+
+      <!-- Radio Button -->
+      <label>
+        <input type="radio" name="opcion" class="radio"> Opción 1
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="opcion" class="radio"> Opción 2
+      </label>
+    </div>
+
+
+    <div class="card">
+      <h2>Progress Bar</h2>
+      <div class="progress-bar">
+        <div class="progress-bar-filled" style="width: 60%"></div>
+      </div>
+    </div>
+    <!-- MODAL -->
+    <div class="card">
+      <h2>Modal</h2>
+      <button class="btn" onclick="openModal()">Abrir Modal</button>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Este es un Modal</h2>
+          <p>Contenido del modal...</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Dropdown (Select)</h2>
+      <label class="label">Selecciona una opción:</label>
+      <select class="select">
+        <option value="1">Opción 1</option>
+        <option value="2">Opción 2</option>
+        <option value="3">Opción 3</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>Badge / Etiqueta</h2>
+      <span class="badge">Nuevo</span>
+      <span class="badge">Pro</span>
+    </div>
+    <div class="card">
+      <h2>Tooltip</h2>
+      <button class="btn tooltip-btn" data-tooltip="Información adicional">Botón con Tooltip</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- TABLA-->
+    <div class="card">
+      <h2>Tabla</h2>
+      <table class="table">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Juan</td>
+          <td>juan@ejemplo.com</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Ana</td>
+          <td>ana@ejemplo.com</td>
+        </tr>
+      </table>
+    </div>
+    <!-- TOAST FLOTANTE -->
+    <div class="card">
+      <h2>Toast</h2>
+      <button class="btn" onclick="showToast('¡Este es un toast en la parte superior derecha!', 'top-center');">Mostrar Notificación</button>
+      <div id="toast" class="toast">Este es un mensaje de toast.</div>
+    </div>
+    <!-- TABS -->
+    <div class="card">
+      <h2>Pestañas</h2>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'tab1')">Tab 1</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab2')">Tab 2</button>
+      </div>
+
+      <div id="tab1" class="tab-content" style="display: block;">
+        <h3>Contenido Tab 1</h3>
+        <p>Texto para la primera pestaña...</p>
+      </div>
+
+      <div id="tab2" class="tab-content">
+        <h3>Contenido Tab 2</h3>
+        <p>Texto para la segunda pestaña...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- loader -->
+    <div class="card">
+      <h2>Loader</h2>
+      <div class="loader"></div>
+    </div>
+    <!-- acordeon -->
+    <div class="card">
+      <h2>Acordeón</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-btn">Item 1</button>
+          <div class="accordion-content">
+            <p>Contenido del Item 1...</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">Item 2</button>
+          <div class="accordion-content">
+            <p>Contenido del Item 2...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--CARD BOX-->
+    <div class="card">
+      <h2>Card</h2>
+      <div class="card-box">
+        <div class="card-header">Card Header</div>
+        <div class="card-body">Contenido de la tarjeta...</div>
+        <div class="card-footer">
+          <button class="btn">Acción</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!--SWITCH-->
+    <div class="card">
+      <h2>Toggle Switch</h2>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <!--SEARCH-->
+    <div class="card">
+      <h2>Search Bar</h2>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar..." />
+        <button class="btn">Buscar</button>
+      </div>
+    </div>
+
+  </div>
+
+
+<script type="text/javascript" src="0pjs.js"></script>
+</body>
+</html>

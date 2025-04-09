@@ -1,4 +1,4 @@
-/* 0% UI Framework - Estilo 16-bits inspirado en la imagen proporcionada */
+/* 0% UI Framework - Estilo 8-bits */
 
 body {
   font-family: 'Press Start 2P', system-ui, sans-serif;
@@ -81,7 +81,7 @@ h1, h2 {
   border: 2px dashed #a9d6e5;
   margin-bottom: 0.5rem;
   color: #edf6f9;
-  position: relative; /* Para que el botón de cierre esté posicionado */
+  position: relative; 
   border-radius: 5px;
 }
 
@@ -123,38 +123,37 @@ h1, h2 {
 
 
 /* CHECKBOX */
-/* Estilo para el checkbox y el radio button */
 input[type="radio"], input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   
-  width: 20px;  /* Tamaño ajustado */
+  width: 20px;  
   height: 20px;
-  border: 3px solid #4d6e8d;  /* Borde más grueso para el estilo pixel */
-  background-color: #2e3c53;  /* Fondo oscuro para el estilo pixel */
-  border-radius: 5px;  /* Borde cuadrado con esquinas ligeramente redondeadas */
+  border: 3px solid #4d6e8d;  
+  background-color: #2e3c53;  
+  border-radius: 5px;  
   position: relative;
   cursor: pointer;
-  transition: all 0.2s ease;  /* Animación suave */
+  transition: all 0.2s ease;  
 }
 
 input[type="radio"]:checked, input[type="checkbox"]:checked {
-  background-color: #0f4c81;  /* Color de fondo cuando se selecciona */
-  border-color: #0f4c81;  /* Bordes del color cuando seleccionado */
+  background-color: #0f4c81;  
+  border-color: #0f4c81;  
 }
 
 /* Crear la "X" dentro del checkbox */
 input[type="checkbox"]:checked::before {
-  content: 'X';  /* El contenido de la "X" */
+  content: 'X';  
   position: absolute;
-  top: 3px;  /* Posición de la "X" dentro del cuadro */
+  top: 3px;  
   left: 3px;
-  font-family: 'Courier New', monospace;  /* Fuente estilo pixel */
-  font-size: 14px;  /* Tamaño ajustado de la "X" */
-  color: white;  /* Color blanco para la "X" */
-  transform: rotate(45deg);  /* Rotar la "X" para que sea diagonal */
-  font-weight: bold;  /* Hacer la "X" más visible */
+  font-family: 'Courier New', monospace;  
+  font-size: 14px;  
+  color: white;  
+  transform: rotate(45deg);  
+  font-weight: bold;  
 }
 
 /* Cuando el radio o checkbox están seleccionados, agregar un círculo pequeño en el centro */
@@ -165,20 +164,20 @@ input[type="radio"]:checked::before, input[type="checkbox"]:checked::before {
   left: 4px;
   width: 10px;
   height: 10px;
-  background-color: white;  /* El círculo interior de color blanco */
-  border-radius: 50%;  /* Forma circular */
+  background-color: white;  
+  border-radius: 50%;  
 }
 
 /* Efecto hover (opcional para el estilo de interacción) */
 input[type="radio"]:hover, input[type="checkbox"]:hover {
-  background-color: #3a4a65;  /* Fondo ligeramente más claro en hover */
-  border-color: #2c3d57;  /* Borde más claro */
+  background-color: #3a4a65;  
+  border-color: #2c3d57;  
 }
 
 /* Foco */
 input[type="radio"]:focus, input[type="checkbox"]:focus {
-  outline: none;  /* Remover el outline por defecto */
-  border-color: #1a72b5;  /* Color de borde cuando están en foco */
+  outline: none;  
+  border-color: #1a72b5;  
 }
 
 
@@ -262,7 +261,7 @@ input[type="radio"]:focus, input[type="checkbox"]:focus {
   width: 50%;
   margin: 100px auto;
   color: #e0e1dd;
-  position: relative; /* Añadir esto para que el botón se posicione dentro de este contenedor */
+  position: relative; 
 }
 
 .close {
@@ -290,7 +289,6 @@ input[type="radio"]:focus, input[type="checkbox"]:focus {
 }
 
 /* TOAST */
-/* Estilo básico para el toast */
 .toast {
   position: fixed;
   background-color: #333;
@@ -356,10 +354,10 @@ input[type="radio"]:focus, input[type="checkbox"]:focus {
   color: #e0e1dd;
   padding: 0.75rem 1rem;
   border: 2px solid #778da9;
-  font-family: 'Press Start 2P', cursive;  /* Estilo pixel */
+  font-family: 'Press Start 2P', cursive;  
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 2px; /* Espaciado de letras para el estilo pixel */
+  letter-spacing: 2px;
 }
 
 .tab-btn:hover {
@@ -376,7 +374,7 @@ input[type="radio"]:focus, input[type="checkbox"]:focus {
   color: #e0e1dd;
   padding: 1rem;
   margin-top: 1rem;
-  font-family: 'Press Start 2P', cursive;  /* Estilo pixel */
+  font-family: 'Press Start 2P', cursive; 
   font-size: 1rem;
 }
 
@@ -413,7 +411,6 @@ h3, p {
 }
 
 /* ACORDEON */
-/* Accordion */
 .accordion-item {
   margin-bottom: 10px;
 }
@@ -441,13 +438,10 @@ h3, p {
 }
 
 /* CARD BOX */
-/* Card */
 .card-box {
   background-color: #1b263b;
   border: 3px solid #415a77;
-  /*padding: 10px;*/
   border-radius: 5px;
-  /*width: 300px;*/
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -471,7 +465,7 @@ h3, p {
 }
 
 
-/* Pixel Art Toggle Switch */
+/* TOGGLE SWITCH */
 .switch {
   position: relative;
   display: inline-block;
@@ -493,9 +487,9 @@ h3, p {
   right: 0;
   bottom: 0;
   background-color: #415a77;
-  border: 2px solid #2a3c56;  /* Definir un borde más grueso */
+  border: 2px solid #2a3c56;  
   transition: 0.2s;
-  border-radius: 2px;  /* Bordes más angulosos para un look pixelado */
+  border-radius: 2px;  
 }
 
 .slider:before {
@@ -504,8 +498,8 @@ h3, p {
   height: 16px;
   width: 16px;
   background-color: #e0e1dd;
-  border: 2px solid #2a3c56;  /* Añadir un borde para el efecto pixel */
-  border-radius: 2px;  /* Bordes más angulosos */
+  border: 2px solid #2a3c56;  
+  border-radius: 2px; 
   left: 2px;
   bottom: 2px;
   transition: 0.2s;
@@ -514,7 +508,7 @@ h3, p {
 /* Efecto cuando el toggle está activado */
 input:checked + .slider {
   background-color: #274c77;
-  border-color: #1e3651; /* Cambio de color de borde al activar */
+  border-color: #1e3651; 
 }
 
 input:checked + .slider:before {
@@ -523,7 +517,7 @@ input:checked + .slider:before {
 
 
 
-/* Search Bar */
+/* SEARCH */
 .search-bar {
   display: flex;
   align-items: center;

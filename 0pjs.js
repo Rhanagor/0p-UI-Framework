@@ -1,3 +1,5 @@
+/* 0% UI Framework */
+
 //MODALS
 function openModal() {
   document.getElementById("modal").style.display = "block";
@@ -14,7 +16,7 @@ function showAlert(type,msg) {
 
   // Crea un nuevo div de alerta
   var alert = document.createElement("div");
-  alert.classList.add("alert", type); // Agrega la clase correspondiente al tipo de alerta
+  alert.classList.add("alert", type); 
 
   // Agrega el contenido de la alerta
   alert.innerHTML = `
@@ -52,12 +54,12 @@ function showToast(message, position = 'top-right') {
   setTimeout(() => {
     toast.classList.remove('show');
     toast.classList.add('hide');
-  }, 3000); // 3 segundos para que se vea el toast
+  }, 3000); 
 
   // Asegurarnos de que el toast no reaparezca después de desaparecer
   setTimeout(() => {
     toast.classList.remove('hide');
-  }, 3500); // Después de 3500ms, removemos la clase hide
+  }, 3500); 
 }
 
 
@@ -80,13 +82,12 @@ function openTab(evt, tabName) {
 
 // Cargar el primer tab por defecto al cargar la página
 document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector(".tab-btn").click(); // Simula el clic en el primer tab
+  document.querySelector(".tab-btn").click(); 
 });
 
 
 
 // ACORDEON
-// Accordion Toggle
 document.querySelectorAll('.accordion-btn').forEach((btn) => {
   btn.addEventListener('click', function () {
     this.classList.toggle('active');
